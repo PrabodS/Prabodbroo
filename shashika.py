@@ -74,19 +74,19 @@ def main():
         resp = str(res)
         if resp == '<Response [204]>':
             print(bar)
-            print("\n\033[1;32;40m [+] ඩේටා නෑ පොන්න ශෂිකයෝ එක බලපන් ... [+]")
+            print("\n\033[1;32;40m [+] ඩේටා නෑ PONNA ශෂිකයෝ ඊලඟ එක බලපන් ... [+]")
             print(bar)
         elif resp == '<Response [200]>':
             print(bar)
-            print("\n\033[1;32;40m [+] ඩේටා ආවා ශෂික පොන්නයෝ... [+]")
+            print("\n\033[1;32;40m [+] ඩේටා ආවා ශෂික POන්නYOO... [+]")
             print(bar)
         else:
             print(bar)
-            print("\n\033[1;31;40m [+] සිග්නල් නෑ පොන්න ශෂිකයෝ ... [+]")
+            print("\n\033[1;31;40m [+] සිග්නල් නෑ PONNA ශෂිකයෝ ... [+]")
             print(bar)
 
         ss+=1
-        print("\033[1;0;40m\n",str(ss), "ඊලඟ Request එක එනකන් තත්පර 100ක් ඉඳපන් ශෂික පොන්නයෝ",end="")
+        print("\033[1;0;40m\n",str(ss), "ඊලඟ Request එක එනකන් තත්පර 100ක් ඉඳපන් ශෂික POන්නYO",end="")
         for i in range(180):
 
             pr = i/180*100
