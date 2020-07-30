@@ -86,7 +86,7 @@ def main():
             print(bar)
 
         ss+=1
-        print("\033[1;0;40m\n",str(ss), "ඊලඟ Request එක එනකන් තත්පර 100ක් ඉන්න...☠PRABOD CREATIONS☠...",end="")
+        print("\033[1;0;40m\n",str(ss), "ඊලඟ Request එක එනකන් තත්පර 100ක් ඉන්න...                  ☠PRABOD CREATIONS☠...",end="")
         for i in range(180):
 
             pr = i/180*100
