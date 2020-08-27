@@ -1,7 +1,7 @@
 #!usr
 # -*- coding: UTF-8 -*-
-# mod by: Dark Revel Rakib_vau
-# team: Black Whale Cyber Source Team
+# mod by: PRABOD SARANGA
+# team: HaCKer's eYE TEAM
 
 
 import os
@@ -36,7 +36,7 @@ def runntxt(s):
 def banner():
     os.system( clear )
     print " "
-    print(" 💗💞Welcome To IP HUNTER💞 ")
+    print(" 💗💞Welcome To IP HUNTER💞♥ ")
   
     time.sleep(1.5)
     print GG+"  √=============================================√"
@@ -47,7 +47,7 @@ def banner():
     print WW+"  |            ⬜⬛🔲FACEBOOK: PRABOD SARANGA🔲⬜⬛            |"
     print Y+"   |             ♥♥ Free Fire: Prabod123456 ♥♥              |"
     print GL+"  |                  ✨⚡⚓♦♠♥♣🔲⬜⬛🔻|"
-    print GL+"  |        LIFE Spammer&Programmer [ L.O.S&P ]         |"
+    print GL+"  |               IP HUNT&Programmer [ L.O.S&P ]         |"
     print GL+"  |🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶🔶|"
     print GG+"  √=============================================√"
     print GL+"  |👉👉👉HACK Facebook👈👈👈|"
@@ -174,8 +174,8 @@ def runn_noobs():
          print " "
 
 raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
-print ("Black Whale cyber Sourse Team, We make a system & breck any system")
-print ("Founder-Anirban Sumon, CEO-Dark Revel, Chairman-Black Shadow")
+print ("HaCKer's eYE Team, We make a system & breck any system")
+print ("Founder-Anirban Sumon, CEO-HaCKer's eYE-Prabod Saranga")
 raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 
 
