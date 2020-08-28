@@ -256,4 +256,112 @@ def menu():
 #-
 def pilih():
 	zedd = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
-	if zedd 
+	if zedd =="":
+		print "\033[1;91m[!] Wrong input"
+		pilih()
+	elif zedd =="1":
+		informasi()
+	elif zedd =="2":
+		dump()
+	elif zedd =="3":
+		menu_hack()
+	elif zedd =="4":
+		menu_bot()
+	elif zedd =="5":
+		lain()
+	elif zedd =="6":
+		os.system('reset')
+		print logo
+		toket=open('login.txt','r').read()
+		print "\033[1;91m[+] \033[1;92mYour token\033[1;91m :\033[1;97m "+toket
+		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+		menu()
+	elif zedd =="7":
+		os.remove('out')
+	elif zedd =="8":
+		os.system('rm -rf login.txt')
+		os.system('xdg-open https://github.com/apaansihasw779')
+		keluar()
+	elif zedd =="0":
+		keluar()
+	else:
+		print "\033[1;91m[!] Wrong input"
+		pilih()
+	
+##### INFO #####
+def informasi():
+	os.system('reset')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"\033[1;91m[!] Token not found"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	os.system('reset')
+	print logo
+	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
+	jalan('\033[1;91m[✺] \033[1;92mWait a minute \033[1;97m...')
+	r = requests.get('https://graph.facebook.com/me/friends?access_token='+toket)
+	cok = json.loads(r.text)
+	for i in cok['data']:
+		if aid in i['name'] or aid in i['id']:
+			x = requests.get("https://graph.facebook.com/"+i['id']+"?access_token="+toket)
+			z = json.loads(x.text)
+			print 42*"\033[1;97m═"
+			try:
+				print '\033[1;91m[➹] \033[1;92mName\033[1;97m          : '+z['name']
+			except KeyError: print '\033[1;91m[?] \033[1;92mName\033[1;97m          : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mID\033[1;97m            : '+z['id']
+			except KeyError: print '\033[1;91m[?] \033[1;92mID\033[1;97m            : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mEmail\033[1;97m         : '+z['email']
+			except KeyError: print '\033[1;91m[?] \033[1;92mEmail\033[1;97m         : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mTelephone\033[1;97m     : '+z['mobile_phone']
+			except KeyError: print '\033[1;91m[?] \033[1;92mTelephone\033[1;97m     : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mLocation\033[1;97m      : '+z['location']['name']
+			except KeyError: print '\033[1;91m[?] \033[1;92mLocation\033[1;97m      : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mDate of birth\033[1;97m : '+z['birthday']
+			except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[➹] \033[1;92mSchool\033[1;97m        : '
+				for q in z['education']:
+					try:
+						print '\033[1;91m                   ~ \033[1;97m'+q['school']['name']
+					except KeyError: print '\033[1;91m                   ~ \033[1;91mNot found'
+			except KeyError: pass
+			raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+			menu()
+		else:
+			pass
+	else:
+		print"\033[1;91m[✖] User not found"
+		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+		menu()
+		
+##### DUMP #####
+def dump():
+	os.system('reset')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"\033[1;91m[!] Token not found"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	os.system('reset')
+	print logo
+	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Get ID friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Get ID friend from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Get ID Search"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Get group member ID"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Get group member email"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m6.\033[1;97m Get group member phone number"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m7.\033[1;97m Get email friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m8.\033[1;97m Get email friend from friend"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m9.\033[1;97m Get a friend's phone number"
+	print "\033[1;97m║--\033[1;91m> \033[1;92m10.\033[1;97m Get a friend's phone number 
