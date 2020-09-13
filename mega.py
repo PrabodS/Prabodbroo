@@ -54,7 +54,7 @@ try:
 
 except ImportError:
     print('%s Requests isn\'t installed, installing now.')
-    os.system( pip3 install requests )
+    os.system('pip3 install requests')
     print( %s Requests has been installed. )
     os.system( clear )
     import requests
